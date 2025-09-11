@@ -136,6 +136,7 @@ body{
   color: var(--neutral-5);
   font-size: var(--fs-body-medium);
   line-height: var(--lh-body-medium);
+  height: 300vh;
 }
 
 ::-webkit-scrollbar{width: 20px;}
@@ -266,4 +267,41 @@ body{
 
 .icon-btn:where(:hover,:focus-visible){
   background-color: var(--neutral-90);
+}
+@media (min-width: 768px){
+  :root{
+    /* font size */
+    --fs-headline-large: 5.2rem;
+    --fs-headline-medium: 4rem;
+    --fs-headline-small: 3.6rem;
+
+    /* line height */
+    --lh-headline-large: 64px;
+    --lh-headline-medium: 52px;
+    --lh-headline-small: 48px;
+  }
+  .container{max-width: 720px;}
+}
+@media (min-width: 992px){
+  :root{
+    --fs-body-large: 1.8rem;
+    --lh-body-large: 32px;
+  }
+  .container{
+    max-width: 950px;
+  }
+}
+
+@media (min-width: 1440px){
+  :root{
+    /* font-size */
+    --fs-headline-large: 7.2rem;
+    --fs-headline-medium: 5.4rem;
+    /* line height */
+    --lh-headline-large: 92px;
+    --lh-headline-medium: 72px;
+  }
+  .container{
+    max-width: 1440px;
+  }
 }
