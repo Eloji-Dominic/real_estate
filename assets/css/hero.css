@@ -1,0 +1,62 @@
+.hero{
+  position: relative;
+  color: var(--neutral-90);
+  /* background-color: blue; */
+  padding-block: 130px 60px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-title{ color: var(--neutral-100);}
+.hero-text{ 
+  margin-block: 16px 32px; 
+  margin-inline: auto;
+  line-height: 30px;
+  font-size: 24px;
+}
+.search-bar{
+  background: var(--white);
+  display: grid;
+  padding: 12px;
+  gap: 10px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-4);
+}
+.search-item{
+  position: relative;
+  color: var(--neutral-50);
+}
+.search-item .search-item-field{
+  height: 70px;
+  color: var(--neutral-90);
+  padding: 6px 12px;
+  margin-block: 12px;
+  background-color: var(--primary-40);
+  border-radius: var(--radius-medium);
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  cursor: pointer;
+} 
+.search-item .search-item-field::placeholder{
+  color: var(--neutral-90);
+}
+.search-item .hero-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-40);
+}
+.search-btn{
+  background-color: var(--primary-40);
+  color: var(--neutral-100);
+  height: 60px;
+  padding-inline: 24px;
+  border-radius: 12px;
+  font-size: 20px;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+.bg-pattern{
+  background-image: linear-gradient(0deg, #000000a1, #0000004d), url("../images/Real\ estate\ \(3\).jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}

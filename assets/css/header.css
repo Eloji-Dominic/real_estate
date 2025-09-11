@@ -29,6 +29,9 @@
   height: 100%;
   gap: 10px;
 }
+.nav-toggle-btn i{
+  font-size: 30px;
+}
 .header.active{
   animation: slide_in 500ms ease forwards;
   height: 80px;
