@@ -4,7 +4,6 @@
   padding-block: 130px 60px;
   overflow: hidden;
   isolation: isolate;
-  /* height: 100vh; */
 }
 .hero-title{ color: var(--neutral-100);}
 .hero-text{ 
