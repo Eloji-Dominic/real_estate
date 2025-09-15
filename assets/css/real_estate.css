@@ -80,6 +80,8 @@
   --transition-easing-quick: cubic-bezier(0,0.7,0.3,1);
   --transition-duration-quick: 200ms;
   --transition-duration-smooth: 500ms;
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
 }
 
 /* Reset */
@@ -295,6 +297,54 @@ body{
   0%{box-shadow: 0 0 0 0 #ffffff80;}
   100%{box-shadow: 0 0 0 20px #ffffff00;}
 }
+
+/* Back to top */
+.back-top-btn{
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: var(--primary-40);
+  color: var(--white);
+  box-shadow: var(--shadow-2);
+  padding: 18px;
+  font-size: 3.5rem;
+  border-radius: 50%;
+  z-index: 4;
+  transition: var(--transition-1);
+  opacity: 0;
+  animation: pulse 1.5s ease-out infinite;
+  visibility: hidden;
+}
+.back-top-btn:is(:hover, :focus-visible){
+  background-color: var(--primary-100);
+  color: var(--white);
+}
+.back-top-btn.active{
+  transform: translateY(-20px);
+  opacity: 1;
+  visibility: visible;
+}
+@keyframes pulse {
+  0%{box-shadow: 0 0 0 4px var(--primary-40);}
+  100%{box-shadow: 0 0 0 25px transparent;}
+}
+.overlay{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+  background-color: var(--neutral-5);
+  z-index: 2;
+  opacity: 0.3;
+  scale: 0.2;
+  transform-origin: bottom left;
+  visibility: hidden;
+  transition: var(--transition-2);
+}
+.overlay.active{
+  scale: 1;
+  visibility: visible;
+}
 @media (min-width: 768px){
   :root{
     /* font size */
@@ -352,5 +402,9 @@ body{
   }
   .play-btn i{
     font-size: 16rem;
+  }
+  .back-top-btn{
+    right: 30px;
+    font-size: 6rem;
   }
 }

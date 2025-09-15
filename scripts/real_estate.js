@@ -1,13 +1,33 @@
 // opening and closing the head scrollbar using javascript code on windows
 const header = document.querySelector(".header");
-window.addEventListener("scroll", () => {
-  header.classList[window.scrollY > 100 ? "add" : "remove"]("active");
-});
+const backTopBtn = document.querySelector(".back-top-btn");
+
+const activeElementOnScroll = function(){
+  if(window.scrollY > 100){
+    header.classList.add("active");
+    backTopBtn.classList.add("active");
+  }else{
+    header.classList.remove("active");
+    backTopBtn.classList.remove("active");
+  }
+}
+
+window.addEventListener("scroll", activeElementOnScroll);
 
 // Opening and closing the navbar
 const navbar = document.querySelector(".navbar");
 const navToggler = document.querySelector(".nav-toggle-btn");
-navToggler.addEventListener("click", () => navbar.classList.toggle('active'));
+const overLay = document.querySelector(".overlay");
+
+navToggler.addEventListener("click", () => {
+  navbar.classList.toggle('active');
+  overLay.classList.add('active');
+});
+
+overLay.addEventListener("click", () => {
+  navbar.classList.remove('active');
+  overLay.classList.remove('active');
+});
 
 // changing the image of heart blinker
 document.addEventListener("DOMContentLoaded", function(){
